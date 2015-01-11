@@ -1,5 +1,5 @@
 {
-    "name": "kwautoallsmart",
+    "name": "kwautoallsmartclient",
     "version": "1.0.0",
     "dependencies": {
         "bootstrap": "latest",
