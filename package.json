@@ -3,10 +3,6 @@
   "version": "0.1.1",
   "description": "A sample Node.js app using Express 4",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "postinstall": "bower install"
-  },
   "dependencies": {
     "express": "~4.9.x",
     "body-parser": "latest",
@@ -15,6 +11,10 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
