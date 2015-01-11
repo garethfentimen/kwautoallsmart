@@ -7,7 +7,7 @@
     "express": "~4.9.x",
     "body-parser": "latest",
     "express-handlebars": "latest",
-    "bower": "0.6.x"
+    "bower": "latest"
   },
   "engines": {
     "node": "0.10.x"
