@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
+    <title>{{title}}</title>
+    <link href="libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+
+	<div class="container">
+
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+        
+	    <div class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header customised-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+			          <span class="sr-only">Toggle navigation</span>
+			          <span class="icon-bar"></span>
+			          <span class="icon-bar"></span>
+			          <span class="icon-bar"></span>
+			        </button>
+                    <a class="navbar-brand" href="home">
+                        <img class="logo" alt="{{title}}" title="{{title}}" src="/images/autoallsmart50.png">
+                    </a> 
+			    </div>
+			    <div class="navbar-collapse collapse">
+			        <ul class="nav navbar-nav">
+			        </ul>
+			        <ul class="nav navbar-nav navbar-right">
+			          <li class="home"><a href="home">Home</a></li>
+			          <li><a href="contact">Contact</a></li>
+			        </ul>
+			    </div><!--/.nav-collapse -->
+		    </div><!--/.container -->
+		</div>
+
+		{{{body}}}
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
