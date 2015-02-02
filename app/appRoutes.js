@@ -16,5 +16,10 @@ module.exports = function(router) {
         res.render('contact', data);
     });
     
+    router.get('/gallery', function(req, res) {
+        var data = { title: 'AutoAllSmart Gallery' };
+        res.render('gallery', data);
+    });
+    
     return router;
 };

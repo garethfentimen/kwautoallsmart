@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "bootstrap": "latest",
-        "font-awesome": "latest"
+        "font-awesome": "latest",
+        "blueimp-bootstrap-image-gallery": "latest"
     }
 }
