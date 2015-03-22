@@ -1,3 +1,4 @@
+'use strict';
 var express = require('express');
 var app = express();
 var expressHbs = require('express-handlebars');
@@ -17,6 +18,13 @@ app.use(bodyParser.json());
 var routes = express.Router();
 
 routes = require("./app/appRoutes.js")(routes);
+
+// redirect for non-www
+app.all('/*', function(req, res, next) {
+  if (req.headers !== null && req.headers.host.match(/^www/) !== null ) {
+    res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  }
+});
 
 // register all our routes
 app.use('/', routes);
