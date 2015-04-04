@@ -22,7 +22,7 @@ routes = require("./app/appRoutes.js")(routes);
 // redirect for non-www
 app.all('/.*/', function(req, res, next) {
   	var host = req.headers("host");
-  	if (host !== null && host.match(/^www\..*/i)) {
+  	if (host.match(/^www\..*/i)) {
 		next();
   	} else {
 		res.redirect(301, "http://www." + host);
