@@ -20,15 +20,13 @@ var routes = express.Router();
 routes = require("./app/appRoutes.js")(routes);
 
 // redirect for non-www
-app.all('/.*/', function(req, res, next) {
-  	var host = req.headers("host");
-  	if (host.match(/^www\..*/i)) {
-		res.redirect(301, "http://" + host);
-  	} else {
-		next();
-  	}
-});
-
+app.all('/*', function(req, res, next) {
+  if (req.headers != null && req.headers.host.match(/^www/) !== null ) {
+    res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  } else {
+    next();     
+  }
+})
 // register all our routes
 app.use('/', routes);
 
