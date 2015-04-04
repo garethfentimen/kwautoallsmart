@@ -23,9 +23,9 @@ routes = require("./app/appRoutes.js")(routes);
 app.all('/.*/', function(req, res, next) {
   	var host = req.headers("host");
   	if (host.match(/^www\..*/i)) {
-		next();
-  	} else {
 		res.redirect(301, "http://" + host);
+  	} else {
+		next();
   	}
 });
 
