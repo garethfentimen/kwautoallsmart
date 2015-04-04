@@ -21,12 +21,14 @@ routes = require("./app/appRoutes.js")(routes);
 
 // redirect for non-www
 app.all('/*', function(req, res, next) {
-  if (req.headers != null && req.headers.host.match(/^www/) !== null ) {
-    res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  if (req.headers.host.slice(0, 4) === 'www.') {
   } else {
     next();     
   }
 })
+
+app.set('trust proxy', true);
+
 // register all our routes
 app.use('/', routes);
 
