@@ -1,9 +1,9 @@
-RewriteEngine On
+#RewriteEngine On
 
 # Force www and allow sub domains
 #RewriteCond %{HTTP_HOST} !^www\.
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 # if there is no host at all - redirect to www
-RewriteCond %{HTTP_HOST} ^scratchedcar.co.uk [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^scratchedcar.co.uk [NC]
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
