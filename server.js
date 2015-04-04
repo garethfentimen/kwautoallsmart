@@ -21,7 +21,8 @@ routes = require("./app/appRoutes.js")(routes);
 
 // redirect for non-www
 app.all('/*', function(req, res, next) {
-  if (req.headers.host.slice(0, 4) === 'www.') {
+  if (req.headers.host.match(/^www\./) !== null) {
+    res.redirect(301, req.protocol + '://' + req.headers.host.replace(/^www\./, '') + req.url);
   } else {
     next();     
   }
