@@ -1,0 +1,34 @@
+img {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+/*.customised-header .navbar-brand {
+    height: 55px !important;
+    padding: 2px 2px !important;
+    margin: 0 0 0 10px;
+}*/
+
+.customised-header .invite {
+    font-size: 11px;
+    color: #777;
+    margin: 9px 0;
+}
+
+.twitter-link img {
+    padding: 1px 0;
+}
+
+    .twitter-link div {
+        font-size: 11px;
+        color: #777;
+    }
+
+    .facebook-link img {
+        margin: 0 0 2px 0;
+    }
+
+.navbar-default {
+    background-color: #000 !important;
+}
