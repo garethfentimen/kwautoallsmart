@@ -17,7 +17,7 @@ img {
 }
 
 .twitter-link img {
-    padding: 1px 0;
+    padding: 2px 0;
 }
 
     .twitter-link div {
@@ -26,9 +26,20 @@ img {
     }
 
     .facebook-link img {
-        margin: 0 0 2px 0;
+        
     }
 
 .navbar-default {
     background-color: #000 !important;
 }
+
+/* Animation for menu item underline*/
+
+.underline {
+    
+}
+
+-webkit-animation: move_eye 4s linear 0s infinite alternate;
+     -moz-animation: move_eye 4s linear 0s infinite alternate;
+       -o-animation: move_eye 4s linear 0s infinite alternate;
+          animation: move_eye 4s linear 0s infinite alternate;
