@@ -12,9 +12,18 @@ img {
 
 .customised-header .invite {
     font-size: 11px;
-    color: #777;
     margin: 9px 0;
 }
+
+    .customised-header a, .customised-header a:active, .customised-header a:focus {
+        color: #777 !important;
+        text-decoration: none;
+    }
+
+    .customised-header a:hover {
+        text-decoration: none;
+        color: #C6CA52 !important; 
+    }
 
 .twitter-link img {
     padding: 2px 0;
@@ -33,9 +42,14 @@ img {
     background-color: #000 !important;
 }
 
+.navbar-default .navbar-nav > li > a:hover
+{
+    color: #C6CA52 !important;
+}
+
 /* Animation for menu item underline*/
 
-.underline {
+.underline-animated {
     
 }
 
