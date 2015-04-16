@@ -13,6 +13,9 @@ img {
 .customised-header .invite {
     font-size: 11px;
     margin: 9px 0;
+    max-width: 99%;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
 }
 
     .customised-header a, .customised-header a:active, .customised-header a:focus {
@@ -53,7 +56,7 @@ img {
     
 }
 
--webkit-animation: move_eye 4s linear 0s infinite alternate;
+/*-webkit-animation: move_eye 4s linear 0s infinite alternate;
      -moz-animation: move_eye 4s linear 0s infinite alternate;
        -o-animation: move_eye 4s linear 0s infinite alternate;
-          animation: move_eye 4s linear 0s infinite alternate;
+          animation: move_eye 4s linear 0s infinite alternate;*/
