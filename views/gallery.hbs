@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="libs/blueimp-gallery/css/blueimp-gallery.min.css">
-<!-- <link rel="stylesheet" href="libs/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css"> -->
 
 <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls blueimp-gallery-playing">
 
@@ -13,54 +12,31 @@
     <a class="next">›</a>
     <a class="play-pause"></a>
     <ol class="indicator"></ol>
-
-
-    <!-- <div class="modal fade">
-        <div class="modal-dialog modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"></h4>
-                </div>
-                <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
 
 <div id="links">
-    <a href="/images/bashedcar1.jpg" title="Before">
+    <a href="/images/bashedcar2.jpg" title="BMW X5 nearside front scuff">
     </a>
 
-    <a href="/images/carfinished1.jpg" title="After">
+    <a href="/images/carfinished2.jpg" title="BMW X5 after the repair">
     </a>
 
-    <a href="/images/bashedcar2.jpg" title="before">
+    <a href="/images/bashedcar1.jpg" title="BMW 3 series nearside rear bumper dent and scratches">
     </a>
 
-    <a href="/images/carfinished2.jpg" title="after">
+    <a href="/images/carfinished1.jpg" title="BMW 3 series after the repair">
     </a>
 </div>
 
 
 <script src="libs/blueimp-gallery/js/blueimp-gallery.min.js"></script>
-<!-- <script src="libs/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.js"></script> -->
 
 <script>
     $(document).ready(function () {
         event = event || window.event;
         var target = event.target || event.srcElement,
             link = target.src ? target.parentNode : target,
-            options = {index: link, event: event, container: '#blueimp-gallery-carousel', carousel: true},
+            options = {index: link, event: event, container: '#blueimp-gallery-carousel', carousel: true, stretchImages: true},
             links = document.getElementById('links').getElementsByTagName('a');
 
         var linksToAdd = [];
@@ -71,15 +47,4 @@
 
         blueimp.Gallery(linksToAdd, options);
     });
-
-    // document.getElementById('links').onclick = function (event) {
-    //     event = event || window.event;
-    //     var target = event.target || event.srcElement,
-    //         link = target.src ? target.parentNode : target,
-    //         options = {index: link, event: event},
-    //         links = this.getElementsByTagName('a');
-    //     blueimp.Gallery(links, options);
-    // };
-
-    
 </script>

@@ -4,10 +4,11 @@
   "description": "A sample Node.js app using Express 4",
   "main": "server.js",
   "dependencies": {
-    "express": "~4.9.x",
     "body-parser": "latest",
+    "bower": "latest",
+    "express": "~4.9.x",
     "express-handlebars": "latest",
-    "bower": "latest"
+    "postmark": "^1.0.0"
   },
   "engines": {
     "node": "0.10.x"
