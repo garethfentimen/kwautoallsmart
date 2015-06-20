@@ -12,18 +12,23 @@ module.exports = function(router) {
     });
 
     router.post('/quote', function(req, res) {
-        // Require
-        var postmark = require("postmark");
+        
+        console.log("posted!");
 
-        // Example request
-        var client = new postmark.Client("2949cc1f-72cb-438d-b166-95bf2d9fd823");
+        // // Require
+        // var postmark = require("postmark");
 
-        client.sendEmail({
-            "From": "mail@kwautoallsmart.com",
-            "To": "garethfentimen@gmail.com",
-            "Subject": "Test", 
-            "TextBody": "Hello from Postmark!"
-        });
+        // // Example request
+        // var client = new postmark.Client("2949cc1f-72cb-438d-b166-95bf2d9fd823");
+
+        // client.sendEmail({
+        //     "From": "mail@kwautoallsmart.com",
+        //     "To": "garethfentimen@gmail.com",
+        //     "Subject": "Test", 
+        //     "TextBody": "Hello from Postmark!"
+        // });
+
+        res.json('{ result: Success }');
     });
     
     router.get('/contact', function(req, res) {

@@ -11,15 +11,20 @@
     
     <button id="quote-request-button" class="btn btn-information">Request a free quote</button>
 	
-    <div id="quote-request-form" class="hidden text-center">
+    <div id="quote-request-form" class="text-center">
 		<p>Please fillout the form and we will get back to you asap.</p>
-	    <form class="form-horizontal">
+	    <form method="POST" action="/quote" class="form-horizontal">
 		  
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label" for="exampleInputEmail1">Email address</label>
 		    <div class="col-sm-6">
-		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Please enter your email address">
 		    </div>
+
+		    <!-- <label class="col-sm-2 control-label" for="exampleInputEmail1">Email address</label>
+		    <div class="col-sm-6">
+		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		    </div> -->
 		  </div>
 
 		  <div class="col-sm-6">
@@ -47,6 +52,10 @@
 				this.formHidden = true;
 			}
 		}
+
+		main.formObject.find(":submit").on("click", function() {
+			$.post();
+		});
 
 		return main;
 	})();
