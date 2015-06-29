@@ -4,6 +4,10 @@ img {
     display: block;
 }
 
+.footer {
+    display: block;
+}
+
 /*.customised-header .navbar-brand {
     height: 55px !important;
     padding: 2px 2px !important;

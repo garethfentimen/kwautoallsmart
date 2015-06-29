@@ -1,9 +1,10 @@
 {
-    "name": "kwautoallsmartclient",
-    "version": "1.0.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "blueimp-bootstrap-image-gallery": "latest"
-    }
+  "name": "kwautoallsmartclient",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "blueimp-bootstrap-image-gallery": "latest",
+    "parsleyjs": "~2.1.2"
+  }
 }

@@ -1,5 +1,5 @@
 module.exports = function(router) {
-    
+
     // home page route (http://localhost:3000)
     router.get('/', function(req, res) {
         var data = { title: 'Kieron Williams AutoAllSmart' };
@@ -13,7 +13,7 @@ module.exports = function(router) {
 
     router.post('/quote', function(req, res) {
         
-        console.log("posted!");
+        console.log("posted!", req.body);
 
         // // Require
         // var postmark = require("postmark");
