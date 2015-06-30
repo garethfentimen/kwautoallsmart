@@ -9,17 +9,16 @@
     <br />
     <p class="text-center">We specialise in bodywork repairs of the highest quality which are cost-effective and convenient.</p>
     
-    <div class="text-center hidden">
-    	<button id="quote-request-button" class="btn btn-warning">Request a free quote</button>
+    <div class="text-center">
+    	<button id="quote-request-button" class="btn btn-custom">Request a free quote</button>
 	</div>
-
-	<div class="clearfix"><br/></div>
 	
-    <div id="quote-request-form" style="display:none;" class="hidden text-center">
-		
+    <div id="quote-request-form" style="display:none;" class="text-center">
+		<hr id="form-header" style="display: none;">
 		<div>
-			<p>Please complete the form below and we will get back to you asap.</p>
+			<h4>Please complete the form below and we will get back to you asap.</h4>
 		</div>
+		
 		<br/>
 
 	    <form method="POST" action="/quote" class="form-horizontal form-width data-parsley-validate">
@@ -63,10 +62,17 @@
 		main.toggleForm = function () {
 			if (main.formHidden) {
 				$(".footer").hide();
-				$("#quote-request-button").fadeOut();
-				this.formContainer.slideDown(600, function() {
-					$(".footer").fadeIn();
-				});
+				$("#quote-request-button").animate({
+				    opacity: 0
+				  }, 200, function() {
+				  	 var button = this;
+				  	 main.formContainer.slideDown(300, function() {
+							$(".footer").fadeIn();
+							$(button).hide();
+							$("#form-header").show();
+						});
+				  });
+				
 				this.formHidden = false;
 			} else {
 				this.formContainer.slideUp();
