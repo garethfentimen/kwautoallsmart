@@ -1,5 +1,7 @@
 module.exports = function(router) {
 
+    var postmark = require("postmark");
+    
     // home page route (http://localhost:3000)
     router.get('/', function(req, res) {
         var data = { title: 'Kieron Williams AutoAllSmart' };
@@ -13,22 +15,30 @@ module.exports = function(router) {
 
     router.post('/quote', function(req, res) {
         
-        console.log("posted!", req.body);
+        var quoteFormData = req.body;
 
-        // // Require
-        // var postmark = require("postmark");
+        if (quoteFormData !== null)
+        {
+            // Example request
+            var client = new postmark.Client("2949cc1f-72cb-438d-b166-95bf2d9fd823");
+    
+            client.sendEmail({
+                "From": "donotreply@kwautoallsmart.com",
+                "To": "garethfentimen@gmail.com",
+                "Subject": "Test", 
+                "TextBody": "Hello from Postmark!"
+            }, function(error, success) {
+                if (!success) {
+                    console.log(error);
+                }
+                res.json('{ result: { Success : true } }');
+            });
+            
+        } else {
+            res.json('{ result: { Success : false } }');    
+        }
 
-        // // Example request
-        // var client = new postmark.Client("2949cc1f-72cb-438d-b166-95bf2d9fd823");
-
-        // client.sendEmail({
-        //     "From": "mail@kwautoallsmart.com",
-        //     "To": "garethfentimen@gmail.com",
-        //     "Subject": "Test", 
-        //     "TextBody": "Hello from Postmark!"
-        // });
-
-        res.json('{ result: Success }');
+        
     });
     
     router.get('/contact', function(req, res) {
