@@ -9,8 +9,7 @@ var sendEmail = function(quoteData) {
 	var br = ", ";
 	var data = {
 		  from : "donotreply@kwautoallsmart.co.uk",
-		  //to : "kieron1963williams@gmail.com",
-		  to : ["gfentimen@neworbit.co.uk", "mail@gfentimen.com" ],
+		  to : ["kieron1963williams@gmail.com", "kieronpwilliams@btinternet.com" ],
 		  subject : "A potential customer has filled out the request quote form",
 		  text : "Name: " + quoteData.clientFullName + br + 
 		  "Email: " + quoteData.clientEmailAddress + br + 
