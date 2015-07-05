@@ -1,5 +1,3 @@
-var request = require('request');
-
 var sendEmail = function(quoteData) {
 	
 	var api_key = 'key-700aee1b3637902eb54ee10c448ddcad';
