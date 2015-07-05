@@ -1,5 +1,7 @@
 module.exports = function(router) {
 
+    var quoteFormCommand = require("./tasks/commands/quoteFormCommand.js");
+    
     // home page route (http://localhost:3000)
     router.get('/', function(req, res) {
         var data = { title: 'Kieron Williams AutoAllSmart' };
@@ -13,22 +15,23 @@ module.exports = function(router) {
 
     router.post('/quote', function(req, res) {
         
-        console.log("posted!", req.body);
+        var quoteFormData = req.body;
 
-        // // Require
-        // var postmark = require("postmark");
-
-        // // Example request
-        // var client = new postmark.Client("2949cc1f-72cb-438d-b166-95bf2d9fd823");
-
-        // client.sendEmail({
-        //     "From": "mail@kwautoallsmart.com",
-        //     "To": "garethfentimen@gmail.com",
-        //     "Subject": "Test", 
-        //     "TextBody": "Hello from Postmark!"
-        // });
-
-        res.json('{ result: Success }');
+        if (quoteFormData !== null)
+        {
+            console.log(quoteFormData);
+            quoteFormCommand.handle(quoteFormData);
+            
+            if (quoteFormCommand.hasError())
+            {
+                console.log("Has error" + quoteFormCommand.getErrorMessage());
+                res.json('{ "Success" : "false", "Error": "' + quoteFormCommand.getErrorMessage() + '" }');
+            }
+            
+            res.json('{ "Success" : true }');
+        } else {
+            res.json('{ Success" : "false", Error: "No Form Data" }');    
+        }
     });
     
     router.get('/contact', function(req, res) {

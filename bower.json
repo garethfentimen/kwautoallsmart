@@ -5,6 +5,6 @@
     "bootstrap": "latest",
     "font-awesome": "latest",
     "blueimp-bootstrap-image-gallery": "latest",
-    "parsleyjs": "~2.1.2"
+    "bootstrapvalidator": "~0.5.3"
   }
 }

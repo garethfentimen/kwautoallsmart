@@ -1,4 +1,6 @@
 <link href="/css/home.css" rel="stylesheet"/>
+<link href="/css/home.css" rel="stylesheet"/>
+
 <div class="container-fluid">
 	<a href="home">
 	    <img class="logo img-responsive center-block" alt="{{title}}" title="{{title}}" src="/images/autoallsmart50.png">
@@ -9,94 +11,63 @@
     <br />
     <p class="text-center">We specialise in bodywork repairs of the highest quality which are cost-effective and convenient.</p>
     
-    <div class="text-center hidden">
-    	<button id="quote-request-button" class="btn btn-warning">Request a free quote</button>
+    <div class="text-center">
+    	<button id="quote-request-button" class="btn btn-custom">Request a free quote</button>
 	</div>
-
-	<div class="clearfix"><br/></div>
 	
-    <div id="quote-request-form" style="display:none;" class="hidden text-center">
-		
+    <div id="quote-request-form" style="display:none;" class="text-center">
+		<hr id="form-header" style="display: none;">
 		<div>
-			<p>Please complete the form below and we will get back to you asap.</p>
+			<h4>Please complete the form below and we will get back to you asap.</h4>
 		</div>
+		
 		<br/>
 
-	    <form method="POST" action="/quote" class="form-horizontal form-width data-parsley-validate">
-		  
-		  <div class="form-group">
-		    <label class="col-sm-2 control-label" for="ClientEmailAddress">Email address</label>
-		    <div class="col-sm-6">
-		    	<input type="email" class="form-control" id="ClientEmailAddress" placeholder="Please enter your email address">
-		    </div>
-		  </div>
+	    <form id="quote-Form" method="POST" action="/quote" class="form-horizontal form-width">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="clientFullName">Name</label>
+				<div class="col-sm-6">
+					<input type="text" required class="form-control" id="clientFullName" name="clientFullName" placeholder="Please enter your full name">
+				</div>
+			</div>
 
-		  
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="clientEmailAddress">Email address</label>
+				<div class="col-sm-6">
+					<input type="email" class="form-control" id="clientEmailAddress" name="clientEmailAddress" placeholder="Please enter your email address">
+				</div>
+			</div>
 
-	      <!-- <div class="form-group">
-	        <label class="col-sm-2 control-label" for="exampleInputEmail1">Email address</label>
-		    <div class="col-sm-6">
-		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-		    </div>
-		    <label class="col-sm-2 control-label" for="exampleInputEmail1">Email address</label>
-	      </div> -->
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="clientContactNumber">Contact number</label>
+				<div class="col-sm-6">
+					<input type="tel" required class="form-control" id="clientContactNumber" name="clientContactNumber" placeholder="Please enter the best number to contact you on">
+				</div>
+			</div>
 
-		  <div class="form-group">
-			  <div class="col-sm-9">
-			  	<button type="submit" class="btn btn-custom">Submit</button>
-			  </div>
-	  	  </div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="clientAddress">Address</label>
+				<div class="col-sm-6">
+					<input type="text" required class="form-control" id="clientAddress" name="clientAddress" placeholder="Please enter the first line of your address">
+				</div>
+			</div>
 
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="clientPostcode">Postcode</label>
+				<div class="col-sm-6">
+					<input type="text" required class="form-control" id="clientPostcode" name="clientPostcode" placeholder="Please enter your postcode">
+				</div>
+			</div> 
+
+		  	<div class="form-group">
+				<div class="col-sm-9">
+					<button type="submit" class="btn btn-custom submit-button" validate>Submit</button>
+				</div>
+			</div>
 	  	</form>
+
   	</div>
 </div>
 
-<script type="text/javascript">
-
-	window.form = (function() {
-		var main = {};
-
-		main.formHidden = true;
-		main.formContainer = $("#quote-request-form");
-		main.formObject = main.formContainer.find("form");
-
-		main.toggleForm = function () {
-			if (main.formHidden) {
-				$(".footer").hide();
-				$("#quote-request-button").fadeOut();
-				this.formContainer.slideDown(600, function() {
-					$(".footer").fadeIn();
-				});
-				this.formHidden = false;
-			} else {
-				this.formContainer.slideUp();
-				this.formHidden = true;
-			}
-		}
-
-		main.formObject.on("submit", function(e) {
-			main.formObject.find(":input").prop("disabled", true);
-			e.preventDefault();
-			console.log($(":input").serialize());
-
-				$.post(main.formObject.prop("action"), function() {
-					main.formObject.serialize();
-					main.formObject.hide();
-					main.formContainer.slideDown().html("<p>Thank you for filling out the form. We will be in contact very soon.</p><img class='img-responsive center-block' width='100' src='images/success.png'>");
-				}).fail(function(e) {
-				    console.log( "error", e);
-			    }).always(function() {
-				    main.formObject.find(":input").prop("disabled", false);
-				});
-		});
-
-		return main;
-	})();
-
-	$(document).ready(function() {
-		$("#quote-request-button").on("click", function() {
-			window.form.toggleForm();
-		});
-	});
-	
-</script>
+<script src="libs/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+<script src="scripts/home.js"></script>
