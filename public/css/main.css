@@ -1,3 +1,13 @@
+body {
+    background-color: rgba(200, 54, 54, 0.5);
+    color: #fff;
+}
+
+.container-fluid {
+    background-color: rgba(200, 54, 54, 0.8);
+    color: #fff;
+}
+
 img {
     padding: 0;
     margin: 0;
@@ -64,3 +74,13 @@ img {
      -moz-animation: move_eye 4s linear 0s infinite alternate;
        -o-animation: move_eye 4s linear 0s infinite alternate;
           animation: move_eye 4s linear 0s infinite alternate;*/
+         
+html { 
+  background: url(../images/Black-Car-in-the-Autumn-Forest-for-site.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Black-Car-in-the-Autumn-Forest-for-site.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Black-Car-in-the-Autumn-Forest-for-site.jpg', sizingMethod='scale')";
+}
