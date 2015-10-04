@@ -1,10 +1,10 @@
 body {
-    background-color: rgba(200, 54, 54, 0.5);
+    background-color: rgba(151, 54, 54, 0.1);
     color: #fff;
 }
 
 .container-fluid {
-    background-color: rgba(200, 54, 54, 0.8);
+    background-color: rgba(151, 54, 54, 0.8);
     color: #fff;
 }
 
@@ -76,11 +76,11 @@ img {
           animation: move_eye 4s linear 0s infinite alternate;*/
          
 html { 
-  background: url(../images/Black-Car-in-the-Autumn-Forest-for-site.jpg) no-repeat center center fixed;
+  background: url(../images/BMW-dusk.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Black-Car-in-the-Autumn-Forest-for-site.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Black-Car-in-the-Autumn-Forest-for-site.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/BMW-dusk.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/BMW-dusk.jpg', sizingMethod='scale')";
 }
