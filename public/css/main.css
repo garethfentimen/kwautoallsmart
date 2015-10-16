@@ -8,6 +8,18 @@ body {
     color: #fff;
 }
 
+.help-block {
+    color: #AACE40 !important;
+}
+
+.has-error .control-label {
+    color: #AACE40 !important; 
+}
+
+.has-success .control-label {
+    color: #fff !important;
+}
+
 img {
     padding: 0;
     margin: 0;
